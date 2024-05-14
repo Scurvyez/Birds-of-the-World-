@@ -25,6 +25,7 @@
         <TemperateForest>0.6</TemperateForest>
         <BiomesIslands_TemperateIsland MayRequire="biomesteam.biomesislands">0.8</BiomesIslands_TemperateIsland>
         <ZBiome_CloudForest MayRequire="zylle.morevanillabiomes">0.8</ZBiome_CloudForest>
+        <BMT_ChromaticOasis MayRequire="biomesteam.oasis">0.8</BMT_ChromaticOasis>
       </wildBiomes>
       <trainability>Intermediate</trainability>
       <useMeatFrom>Chicken</useMeatFrom>
