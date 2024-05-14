@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\Birds of the World!\\Source\\BOTW\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D94A127B-D9B7-4441-ADA0-BFA1C7E424CC}|BOTW.csproj|s:\\games\\steam\\steamapps\\common\\rimworld\\mods\\birds of the world!\\source\\botw\\thingcomps\\companimalcolorrandomizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D94A127B-D9B7-4441-ADA0-BFA1C7E424CC}|BOTW.csproj|solutionrelative:thingcomps\\companimalcolorrandomizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D94A127B-D9B7-4441-ADA0-BFA1C7E424CC}|BOTW.csproj|S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\Birds of the World!\\Source\\BOTW\\pawnrendernodes\\pawnrendernode_animalrandomizedgraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D94A127B-D9B7-4441-ADA0-BFA1C7E424CC}|BOTW.csproj|solutionrelative:pawnrendernodes\\pawnrendernode_animalrandomizedgraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CompAnimalColorRandomizer.cs",
+              "DocumentMoniker": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\Birds of the World!\\Source\\BOTW\\ThingComps\\CompAnimalColorRandomizer.cs",
+              "RelativeDocumentMoniker": "ThingComps\\CompAnimalColorRandomizer.cs",
+              "ToolTip": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\Birds of the World!\\Source\\BOTW\\ThingComps\\CompAnimalColorRandomizer.cs",
+              "RelativeToolTip": "ThingComps\\CompAnimalColorRandomizer.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T15:54:47.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PawnRenderNode_AnimalRandomizedGraphics.cs",
+              "DocumentMoniker": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\Birds of the World!\\Source\\BOTW\\PawnRenderNodes\\PawnRenderNode_AnimalRandomizedGraphics.cs",
+              "RelativeDocumentMoniker": "PawnRenderNodes\\PawnRenderNode_AnimalRandomizedGraphics.cs",
+              "ToolTip": "S:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\Birds of the World!\\Source\\BOTW\\PawnRenderNodes\\PawnRenderNode_AnimalRandomizedGraphics.cs",
+              "RelativeToolTip": "PawnRenderNodes\\PawnRenderNode_AnimalRandomizedGraphics.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T15:52:13.906Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

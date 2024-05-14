@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>tyrannidae.birdsoftheworld</packageId>
+  <name>Birds of the World!</name>
+  <author>Tyrannidae</author>
+  <description>This mod adds a bunch of random birds from all over the place. 
+Credits to Steve for the C# code allowing for random color variation!</description>
+  <supportedVersions>
+    <li>1.5</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+      <displayName>Vanilla Expanded Framework</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+      <downloadUrl>https://github.com/AndroidQuazar/VanillaExpandedFramework</downloadUrl>
+    </li>
+  </modDependencies>
+</ModMetaData>

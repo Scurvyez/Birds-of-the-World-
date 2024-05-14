@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>TYR_Owl_AfricanGrass</defName>
+    <label>African grass owl</label>
+    <description>A dark-colored owl closely related to the barn owl (Tyto alba). These skilled and
+      silent hunters can be found haunting grasslands and marshes by night, and roosting in groups
+      of 2-5 by day.\n\nScientific Name: Tyto capensis</description>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+      <MarketValue>100</MarketValue>
+      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+    </statBases>
+    <race>
+      <body>Bird</body>
+      <predator>true</predator>
+      <baseBodySize>0.4</baseBodySize>
+      <maxPreyBodySize>0.3</maxPreyBodySize>
+      <baseHungerRate>0.15</baseHungerRate>
+      <baseHealthScale>0.42</baseHealthScale>
+      <foodType>CarnivoreAnimal</foodType>
+      <wildness>0.7</wildness>
+      <wildBiomes>
+        <AridShrubland>0.7</AridShrubland>
+        <Savanna MayRequire="mlie.advancedbiomes">0.7</Savanna>
+        <AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.2</AB_IdyllicMeadows>
+        <RG_TemperateGrassland MayRequire="regrowth.botr.core">0.5</RG_TemperateGrassland>
+        <ZBiome_Grasslands MayRequire="zylle.morevanillabiomes">0.5</ZBiome_Grasslands>
+      </wildBiomes>
+      <trainability>Intermediate</trainability>
+      <useMeatFrom>Chicken</useMeatFrom>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>15</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Chick_Call</soundWounded>
+          <soundDeath>Pawn_Chick_Call</soundDeath>
+          <soundCall>Pawn_Chick_Call</soundCall>
+          <soundAngry>Pawn_Chick_Call</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.4</minAge>
+          <soundWounded>Pawn_OwlAfrGrass_Call</soundWounded>
+          <soundCall>Pawn_OwlAfrGrass_Call</soundCall>
+          <soundAngry>Pawn_OwlAfrGrass_Call</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>talons</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>beak</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>1</power>
+        <cooldownTime>20</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.8</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>EggAfricanGrassOwlUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggAfricanGrassOwlFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>15</eggLayIntervalDays>
+        <eggCountRange>3</eggCountRange>
+      </li>
+      <!-- <li Class="BOTW.CompProperties_AnimalColorRandomizer"> -->
+        <!-- <rRangeOne>0.5~0.7</rRangeOne> --> <!-- mask texture red color (red channel) -->
+				<!-- <gRangeOne>0.3~0.5</gRangeOne> --> <!-- mask texture red color (green channel) -->
+				<!-- <bRangeOne>0.1~0.3</bRangeOne> --> <!-- mask texture red color (blue channel) -->
+
+				<!-- <rRangeTwo>0.1~0.8</rRangeTwo> --> <!-- mask texture green color (red channel) -->
+				<!-- <gRangeTwo>0.4~0.2</gRangeTwo> --> <!-- mask texture green color (green channel) -->
+				<!-- <bRangeTwo>0.0~0.1</bRangeTwo> --> <!-- mask texture green color (blue channel) -->
+      <!-- </li> -->
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>TYR_Owl_AfricanGrass</defName>
+    <label>African grass owl</label>
+    <race>TYR_Owl_AfricanGrass</race>
+    <combatPower>40</combatPower>
+    <ecoSystemWeight>0.3</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>African grass owl</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Owl_AfricanGrass/AfricanGrassOwl</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Owl_skel</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Owl_AfricanGrass/AfricanGrassOwl</texPath>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Owl_skel</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Owl_AfricanGrass/AfricanGrassOwl</texPath>
+          <drawSize>1.4</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Owl_skel</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

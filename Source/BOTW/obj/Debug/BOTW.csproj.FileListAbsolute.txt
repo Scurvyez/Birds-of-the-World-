@@ -1,0 +1,4 @@
+S:\Games\Steam\steamapps\common\RimWorld\Mods\Birds of the World!\1.5\Assemblies\BOTW.dll
+S:\Games\Steam\steamapps\common\RimWorld\Mods\Birds of the World!\Source\BOTW\obj\Debug\BOTW.csproj.AssemblyReference.cache
+S:\Games\Steam\steamapps\common\RimWorld\Mods\Birds of the World!\Source\BOTW\obj\Debug\BOTW.csproj.CoreCompileInputs.cache
+S:\Games\Steam\steamapps\common\RimWorld\Mods\Birds of the World!\Source\BOTW\obj\Debug\BOTW.dll

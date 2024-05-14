@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EggAfricanGrassOwlUnfertilized</defName>
+    <label>African grass owl egg (unfert.)</label>
+    <description>Unfertilized African grass owl egg. It can be eaten raw, but it's much, much better
+      cooked.</description>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggAfricanGrassOwlFertilized</defName>
+    <label>African grass owl egg (fert.)</label>
+    <description>Fertilized African grass owl egg. You can eat it, but should you?</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>5.5</hatcherDaystoHatch>
+        <hatcherPawn>TYR_Owl_AfricanGrass</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EggCaicaParrotUnfertilized</defName>
+    <label>caica parrot egg (unfert.)</label>
+    <description>Unfertilized caica parrot egg. It can be eaten raw, but it's much, much better
+      cooked.</description>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggCaicaParrotFertilized</defName>
+    <label>caica parrot egg (fert.)</label>
+    <description>Fertilized caica parrot egg. You can eat it, but should you?</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>5.5</hatcherDaystoHatch>
+        <hatcherPawn>TYR_Parrot_Caica</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EggBlackWingedCuckooshrikeUnfertilized</defName>
+    <label>black-winged cuckooshrike egg (unfert.)</label>
+    <description>Unfertilized black-winged cuckooshrike egg. It can be eaten raw, but it's much,
+      much better cooked.</description>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggBlackWingedCuckooshrikeFertilized</defName>
+    <label>black-winged cuckooshrike egg (fert.)</label>
+    <description>Fertilized black-winged cuckooshrike egg. You can eat it, but should you?</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>5.5</hatcherDaystoHatch>
+        <hatcherPawn>TYR_Cuckooshrike_BlackWinged</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EggPhilippineFairyBluebirdUnfertilized</defName>
+    <label>Philippine fairy-bluebird egg (unfert.)</label>
+    <description>Unfertilized Philippine fairy-bluebird egg. It can be eaten raw, but it's much,
+      much better cooked.</description>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggPhilippineFairyBluebirdFertilized</defName>
+    <label>Philippine fairy-bluebird egg (fert.)</label>
+    <description>Fertilized Philippine fairy-bluebird egg. You can eat it, but should you?</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>5.5</hatcherDaystoHatch>
+        <hatcherPawn>TYR_FairyBluebird_Philippine</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
