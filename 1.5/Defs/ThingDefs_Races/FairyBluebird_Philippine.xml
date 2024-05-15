@@ -100,6 +100,22 @@
         </surpriseAttack>
       </li>
     </tools>
+    <!--<modExtensions>
+      <li Class="BOTW.ModExtension_RandomAdultGraphics">
+        <adultGraphicsMale>
+          <li>
+            <texPath>maleAlternateGraphicOnePath</texPath>
+            <drawSize>itsDrawSize</drawSize>
+          </li>
+        </adultGraphicsMale>
+        <adultGraphicsFemale>
+          <li>
+            <texPath>femaleAlternateGraphicOnePath</texPath>
+            <drawSize>itsDrawSize</drawSize>
+          </li>
+        </adultGraphicsFemale>
+      </li>
+    </modExtensions>-->
     <comps>
       <li Class="CompProperties_EggLayer">
         <eggUnfertilizedDef>EggPhilippineFairyBluebirdUnfertilized</eggUnfertilizedDef>

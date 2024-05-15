@@ -8,8 +8,8 @@ namespace BOTW
     {
         public CompProperties_AnimalColorRandomizer Props => (CompProperties_AnimalColorRandomizer)props;
 
-        public Color newColor = new ();
-        public Color newColorTwo = new ();
+        public Color newColor;
+        public Color newColorTwo;
         private readonly float alpha = 1f;
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
@@ -67,7 +67,7 @@ namespace BOTW
 
         public override IEnumerable<string> ConfigErrors(ThingDef parentDef)
         {
-            foreach (string error in base.ConfigErrors(parentDef))
+            foreach (var error in base.ConfigErrors(parentDef))
             {
                 yield return error;
             }

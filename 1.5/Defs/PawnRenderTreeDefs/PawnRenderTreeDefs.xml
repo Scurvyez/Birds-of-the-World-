@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<PawnRenderTreeDef>
-  <defName>TYR_AnimalRandomizedColors</defName>
-  <root Class="PawnRenderNodeProperties_Parent">
-    <debugLabel>Root</debugLabel>
-    <tagDef>Root</tagDef>
-    <children>
-      <li>
-        <debugLabel>Body</debugLabel>
-        <tagDef>Body</tagDef>
-        <useRottenColor>true</useRottenColor>
-        <nodeClass>BOTW.PawnRenderNode_AnimalRandomizedGraphics</nodeClass>
-      </li>
-    </children>
-  </root>
-</PawnRenderTreeDef>
+  <PawnRenderTreeDef>
+    <defName>TYR_AnimalRandomizedColors</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>BOTW.PawnRenderNode_AnimalRandomizedGraphics</nodeClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
 </Defs>
