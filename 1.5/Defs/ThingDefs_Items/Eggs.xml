@@ -119,4 +119,34 @@
       </li>
     </comps>
   </ThingDef>
+  
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EggWhiteBrowedTrillerUnfertilized</defName>
+    <label>white-browed triller (unfert.)</label>
+    <description>Unfertilized white-browed triller egg. It can be eaten raw, but it's much,
+      much better cooked.</description>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggWhiteBrowedTrillerFertilized</defName>
+    <label>white-browed triller (fert.)</label>
+    <description>Fertilized white-browed triller egg. You can eat it, but should you?</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>5.5</hatcherDaystoHatch>
+        <hatcherPawn>TYR_Triller_WhiteBrowed</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
 </Defs>
