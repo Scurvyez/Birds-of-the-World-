@@ -28,6 +28,7 @@
         <TropicalSwamp>0.01</TropicalSwamp>
         <TropicalRainforest>0.8</TropicalRainforest>
         <BiomesIslands_TropicalIsland MayRequire="biomesteam.biomesislands">0.5</BiomesIslands_TropicalIsland>
+		<BMT_ChromaticOasis MayRequire="biomesteam.oasis">0.8</BMT_ChromaticOasis>
       </wildBiomes>
       <trainability>Intermediate</trainability>
       <useMeatFrom>Chicken</useMeatFrom>

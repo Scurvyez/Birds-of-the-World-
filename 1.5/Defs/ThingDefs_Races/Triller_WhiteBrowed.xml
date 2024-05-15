@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="AnimalThingBase">
-    <defName>TYR_FairyBluebird_Philippine</defName>
-    <label>Philippine fairy-bluebird</label>
-    <description>This strikingly blue bird is a fan of fruits, especially figs.\n\nScientific Name: Irena cyanogastra</description>
+    <defName>TYR_Triller_WhiteBrowed</defName>
+    <label>white-browed triller</label>
+    <description>This black and white bird is omnivorous and is mainly found in low-elevation forests.\n\nScientific Name: Lalage moesta</description>
     <statBases>
       <MoveSpeed>5</MoveSpeed>
       <MarketValue>50</MarketValue>
@@ -13,19 +12,16 @@
       <FilthRate>2</FilthRate>
     </statBases>
     <race>
-      <renderTree>TYR_AnimalRandomizedColors</renderTree>
       <body>Bird</body>
       <predator>false</predator>
       <baseBodySize>0.2</baseBodySize>
       <baseHungerRate>0.1</baseHungerRate>
       <baseHealthScale>0.25</baseHealthScale>
-      <foodType>VegetarianRoughAnimal</foodType>
+      <foodType>OmnivoreAnimal</foodType>
       <wildness>0.6</wildness>
       <wildBiomes>
         <TemperateForest>0.6</TemperateForest>
         <BiomesIslands_TemperateIsland MayRequire="biomesteam.biomesislands">0.8</BiomesIslands_TemperateIsland>
-        <ZBiome_CloudForest MayRequire="zylle.morevanillabiomes">0.8</ZBiome_CloudForest>
-        <BMT_ChromaticOasis MayRequire="biomesteam.oasis">0.8</BMT_ChromaticOasis>
       </wildBiomes>
       <trainability>Intermediate</trainability>
       <useMeatFrom>Chicken</useMeatFrom>
@@ -42,16 +38,16 @@
         <li>
           <def>AnimalJuvenile</def>
           <minAge>0.1666</minAge>
-          <soundWounded>Pawn_PhilFairyBluebird_Call</soundWounded>
-          <soundCall>Pawn_PhilFairyBluebird_Call</soundCall>
-          <soundAngry>Pawn_PhilFairyBluebird_Call</soundAngry>
+          <soundWounded>Pawn_WBTriller_Call</soundWounded>
+          <soundCall>Pawn_WBTriller_Call</soundCall>
+          <soundAngry>Pawn_WBTriller_Call</soundAngry>
         </li>
         <li>
           <def>AnimalAdult</def>
           <minAge>0.5</minAge>
-          <soundWounded>Pawn_PhilFairyBluebird_Call</soundWounded>
-          <soundCall>Pawn_PhilFairyBluebird_Call</soundCall>
-          <soundAngry>Pawn_PhilFairyBluebird_Call</soundAngry>
+          <soundWounded>Pawn_WBTriller_Call</soundWounded>
+          <soundCall>Pawn_WBTriller_Call</soundCall>
+          <soundAngry>Pawn_WBTriller_Call</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -101,66 +97,29 @@
         </surpriseAttack>
       </li>
     </tools>
-    <!--<modExtensions>
-      <li Class="BOTW.ModExtension_RandomAdultGraphics">
-        <adultGraphicsMale>
-          <li>
-            <texPath>maleAlternateGraphicOnePath</texPath>
-            <drawSize>itsDrawSize</drawSize>
-          </li>
-        </adultGraphicsMale>
-        <adultGraphicsFemale>
-          <li>
-            <texPath>femaleAlternateGraphicOnePath</texPath>
-            <drawSize>itsDrawSize</drawSize>
-          </li>
-        </adultGraphicsFemale>
-      </li>
-    </modExtensions>-->
     <comps>
       <li Class="CompProperties_EggLayer">
-        <eggUnfertilizedDef>EggPhilippineFairyBluebirdUnfertilized</eggUnfertilizedDef>
-        <eggFertilizedDef>EggPhilippineFairyBluebirdFertilized</eggFertilizedDef>
+        <eggUnfertilizedDef>EggWhiteBrowedTrillerUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggWhiteBrowedTrillerFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>15</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
       </li>
-      <li Class="BOTW.CompProperties_AnimalColorRandomizer">
-		<!--Body-->
-        <maleRRangeOne>0.0~0.07</maleRRangeOne> <!-- mask texture red color (red channel) -->
-        <maleGRangeOne>0.0~0.1</maleGRangeOne> <!-- mask texture red color (green channel) -->
-        <maleBRangeOne>0.65~0.8</maleBRangeOne> <!-- mask texture red color (blue channel) -->
-		
-		<!--Crest/wings-->
-        <maleRRangeTwo>0.0~0.1</maleRRangeTwo> <!-- mask texture green color (red channel) -->
-        <maleGRangeTwo>0.1~0.4</maleGRangeTwo> <!-- mask texture green color (green channel) -->
-        <maleBRangeTwo>0.8~0.9</maleBRangeTwo> <!-- mask texture green color (blue channel) -->
-
-		<!-- Body-->
-        <femaleRRangeOne>0.0~0.0</femaleRRangeOne>
-        <femaleGRangeOne>0.0~0.1</femaleGRangeOne>
-        <femaleBRangeOne>0.2~0.4</femaleBRangeOne>
-
-		<!--Crest/wings-->
-        <femaleRRangeTwo>0.1~0.15</femaleRRangeTwo>
-        <femaleGRangeTwo>0.1~0.15</femaleGRangeTwo>
-        <femaleBRangeTwo>0.4~0.5</femaleBRangeTwo>
-      </li>
     </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>TYR_FairyBluebird_Philippine</defName>
-    <label>Philippine fairy-bluebird</label>
-    <race>TYR_FairyBluebird_Philippine</race>
+    <defName>TYR_Triller_WhiteBrowed</defName>
+    <label>white-browed triller</label>
+    <race>TYR_Triller_WhiteBrowed</race>
     <combatPower>30</combatPower>
     <ecoSystemWeight>0.2</ecoSystemWeight>
     <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/FairyBluebird_Philippine/FairyBluebird_Philippine</texPath>
+          <texPath>Things/Pawn/Animal/Triller_WhiteBrowed/Triller_WhiteBrowed</texPath>
           <drawSize>0.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -170,7 +129,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/FairyBluebird_Philippine/FairyBluebird_Philippine</texPath>
+          <texPath>Things/Pawn/Animal/Triller_WhiteBrowed/Triller_WhiteBrowed</texPath>
           <drawSize>0.6</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -180,7 +139,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/FairyBluebird_Philippine/FairyBluebird_Philippine</texPath>
+          <texPath>Things/Pawn/Animal/Triller_WhiteBrowed/Triller_WhiteBrowed</texPath>
           <drawSize>0.7</drawSize>
           <shadowData>
             <volume>(0.25, 0.3, 0.25)</volume>
