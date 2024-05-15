@@ -15,6 +15,7 @@
       <FilthRate>2</FilthRate>
     </statBases>
     <race>
+	  <renderTree>TYR_AnimalRandomizedColors</renderTree>
       <body>Bird</body>
       <predator>false</predator>
       <baseBodySize>0.2</baseBodySize>
@@ -101,6 +102,22 @@
         </surpriseAttack>
       </li>
     </tools>
+	<modExtensions>
+      <li Class="BOTW.ModExtension_RandomAdultGraphics">
+        <adultGraphicsMale>
+          <li>
+            <texPath>Things/Pawn/Animal/Cuckooshrike_BlackWinged/Cuckooshrike_BlackWinged_M_1</texPath>
+			<drawSize>0.7</drawSize>
+          </li>
+        </adultGraphicsMale>
+        <adultGraphicsFemale>
+          <li>
+            <texPath>Things/Pawn/Animal/Cuckooshrike_BlackWinged/Cuckooshrike_BlackWinged_F_1</texPath>
+			<drawSize>0.7</drawSize>
+          </li>
+        </adultGraphicsFemale>
+      </li>
+    </modExtensions>
     <comps>
       <li Class="CompProperties_EggLayer">
         <eggUnfertilizedDef>EggBlackWingedCuckooshrikeUnfertilized</eggUnfertilizedDef>
@@ -109,6 +126,27 @@
         <eggLayIntervalDays>15</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
         <eggCountRange>1</eggCountRange>
+      </li>
+	  <li Class="BOTW.CompProperties_AnimalColorRandomizer">
+		<!--Body-->
+        <maleRRangeOne>0.0~0.07</maleRRangeOne> <!-- mask texture red color (red channel) -->
+        <maleGRangeOne>0.0~0.1</maleGRangeOne> <!-- mask texture red color (green channel) -->
+        <maleBRangeOne>0.65~0.8</maleBRangeOne> <!-- mask texture red color (blue channel) -->
+		
+		<!--Crest/wings-->
+        <maleRRangeTwo>0.0~0.1</maleRRangeTwo> <!-- mask texture green color (red channel) -->
+        <maleGRangeTwo>0.1~0.4</maleGRangeTwo> <!-- mask texture green color (green channel) -->
+        <maleBRangeTwo>0.8~0.9</maleBRangeTwo> <!-- mask texture green color (blue channel) -->
+
+		<!-- Body-->
+        <femaleRRangeOne>0.0~0.0</femaleRRangeOne>
+        <femaleGRangeOne>0.0~0.1</femaleGRangeOne>
+        <femaleBRangeOne>0.2~0.4</femaleBRangeOne>
+
+		<!--Crest/wings-->
+        <femaleRRangeTwo>0.1~0.15</femaleRRangeTwo>
+        <femaleGRangeTwo>0.1~0.15</femaleGRangeTwo>
+        <femaleBRangeTwo>0.4~0.5</femaleBRangeTwo>
       </li>
     </comps>
   </ThingDef>
