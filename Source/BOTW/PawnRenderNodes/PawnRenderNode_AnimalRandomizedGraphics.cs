@@ -12,7 +12,6 @@ namespace BOTW
     public class PawnRenderNode_AnimalRandomizedGraphics : PawnRenderNode_AnimalPart
     {
         private readonly ModExtension_RandomAdultGraphics _modExt; // reference to our mod extension in xml
-        private readonly Vector2 _finalDrawSize; // reference to the default graphics' drawSize
         
         /// <summary>
         /// Our class' constructor, we set our readonly fields here, and we never touch them again.
@@ -21,7 +20,6 @@ namespace BOTW
         public PawnRenderNode_AnimalRandomizedGraphics(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
         {
             _modExt = pawn.def.GetModExtension<ModExtension_RandomAdultGraphics>();
-            _finalDrawSize = pawn.ageTracker.CurKindLifeStage.bodyGraphicData.drawSize;
         }
         
         /// <summary>
@@ -30,6 +28,7 @@ namespace BOTW
         public override Graphic GraphicFor(Pawn pawn)
         {
             Graphic defaultGraphic = pawn.ageTracker.CurKindLifeStage.bodyGraphicData.Graphic; // the animals default graphic
+            Vector2 finalDrawSize = pawn.ageTracker.CurKindLifeStage.bodyGraphicData.drawSize; // default graphic draw size
             
             // if our animal doesn't have the random colors comp, just use the default graphic
             if (!pawn.TryGetComp(out CompAnimalColorRandomizer comp)) 
@@ -41,7 +40,7 @@ namespace BOTW
             // lists always start at 0, hence the "- 1" to ensure we get the last element in the list and not the second last
             if (pawn.ageTracker.CurLifeStageIndex != pawn.RaceProps.lifeStageAges.Count - 1 || _modExt == null)
                 return GraphicDatabase.Get<Graphic_Multi>(defaultGraphic.path, ShaderDatabase.CutoutComplex,
-                    defaultGraphic.drawSize, comp.newColor, comp.newColorTwo);
+                    finalDrawSize, comp.newColor, comp.newColorTwo);
             
             // if our animal is an adult and the mod extension does exist...
             // create a new list of graphics to pick from based on sex and the graphics we define in the mod extension
@@ -67,7 +66,7 @@ namespace BOTW
             // just use the default graphic with our random colors applied
             if (finalGraphicsList.NullOrEmpty())
                 return GraphicDatabase.Get<Graphic_Multi>(defaultGraphic.path, ShaderDatabase.CutoutComplex,
-                    defaultGraphic.drawSize, comp.newColor, comp.newColorTwo);
+                    finalDrawSize, comp.newColor, comp.newColorTwo);
             
             // almost done, now let's pick a random graphic from our list!
             GraphicData selectedGraphic = finalGraphicsList.RandomElement();
@@ -75,16 +74,28 @@ namespace BOTW
             // if the graphic we picked has a valid texPath defined in xml...
             if (selectedGraphic?.texPath != null)
             {
-                // use the graphic we picked with our random colors applied! YAY!
+                // if our graphic should be grayscale...
+                // convert our colors for the mask texture to grayscale and apply them
+                if (_modExt.grayscaleAdultGraphics)
+                {
+                    Color gsColorOne = new Color(comp.newColor.grayscale, comp.newColor.grayscale, comp.newColor.grayscale);
+                    Color gsColorTwo = new Color(comp.newColorTwo.grayscale, comp.newColorTwo.grayscale, comp.newColorTwo.grayscale);
+                    
+                    return GraphicDatabase.Get<Graphic_Multi>(selectedGraphic.texPath, ShaderDatabase.CutoutComplex, 
+                        finalDrawSize, gsColorOne, gsColorTwo
+                    );
+                }
+                
+                // use the graphic we picked with our random colors applied
                 return GraphicDatabase.Get<Graphic_Multi>(selectedGraphic.texPath, ShaderDatabase.CutoutComplex, 
-                    _finalDrawSize, comp.newColor, comp.newColorTwo
+                    finalDrawSize, comp.newColor, comp.newColorTwo
                 );
             }
             
             // if everything fails none of the above situations are true, fallback to our animals' default graphic
             // (with our random colors applied)
             return GraphicDatabase.Get<Graphic_Multi>(defaultGraphic.path, ShaderDatabase.CutoutComplex,
-                defaultGraphic.drawSize, comp.newColor, comp.newColorTwo);
+                finalDrawSize, comp.newColor, comp.newColorTwo);
         }
     }
 }

@@ -9,7 +9,8 @@ namespace BOTW
     /// </summary>
     public class ModExtension_RandomAdultGraphics : DefModExtension
     {
-        public List<GraphicData> adultGraphicsMale; // list of male graphics
-        public List<GraphicData> adultGraphicsFemale; // list of female graphics
+        public bool grayscaleAdultGraphics; // false by default
+        public List<GraphicData> adultGraphicsMale = null; // list of male graphics
+        public List<GraphicData> adultGraphicsFemale = null; // list of female graphics
     }
 }

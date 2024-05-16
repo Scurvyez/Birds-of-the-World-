@@ -104,6 +104,7 @@
     </tools>
 	<modExtensions>
       <li Class="BOTW.ModExtension_RandomAdultGraphics">
+        <!--<grayscaleAdultGraphics>true</grayscaleAdultGraphics>--> <!-- for testing -->
         <adultGraphicsMale>
           <li>
             <texPath>Things/Pawn/Animal/Cuckooshrike_BlackWinged/Cuckooshrike_BlackWinged_M_1</texPath>
