@@ -3,6 +3,10 @@ using Verse;
 
 namespace BOTW
 {
+    /// <summary>
+    /// Just a little improvement to any log messages/warnings/and errors we want to throw.
+    /// Color coded for enhanced clarity!
+    /// </summary>
     public static class BOTWLog
     {
         public static Color ErrorMsgCol = new(0.4f, 0.54902f, 1.0f);

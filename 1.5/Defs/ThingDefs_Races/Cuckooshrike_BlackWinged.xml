@@ -107,13 +107,11 @@
         <adultGraphicsMale>
           <li>
             <texPath>Things/Pawn/Animal/Cuckooshrike_BlackWinged/Cuckooshrike_BlackWinged_M_1</texPath>
-			<drawSize>0.7</drawSize>
           </li>
         </adultGraphicsMale>
         <adultGraphicsFemale>
           <li>
             <texPath>Things/Pawn/Animal/Cuckooshrike_BlackWinged/Cuckooshrike_BlackWinged_F_1</texPath>
-			<drawSize>0.7</drawSize>
           </li>
         </adultGraphicsFemale>
       </li>
