@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<!-- Owls -->
-	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/ThingDef[defName="TYR_Owl_AfricanGrass"]</xpath>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Expanded Framework</li>
+		</mods>
+		<match Class="PatchOperationAddModExtension">
+			<xpath>/Defs/ThingDef[defName="TYR_Owl_AfricanGrass"]</xpath>
 		<value>
 			<li Class="NocturnalAnimals.ExtendedRaceProperties">
 				<bodyClock>Nocturnal</bodyClock>
 			</li>
 		</value>
+		</match>
 	</Operation>
 </Patch>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Owls -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Expanded Framework</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/ThingDef[defName="TYR_Owl_AfricanGrass"]</xpath>
+					<value>
+						<li Class="PathfindingFramework.MovementExtension">
+							<movementDef>PF_Movement_Flying</movementDef>
+						</li>
+						<li Class="PathfindingFramework.LocomotionMovementExtension">
+							<locomotionUrgencies>
+								<li>Jog</li>
+								<li>Sprint</li>
+							</locomotionUrgencies>
+							<moveSpeedMultiplier>4</moveSpeedMultiplier>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/PawnKindDef[defName="TYR_Owl_AfricanGrass"]</xpath>
+					<value>
+						<li Class="PathfindingFramework.LocomotionGraphicExtension">
+							<locomotionUrgencies>
+								<li>Jog</li>
+								<li>Sprint</li>
+							</locomotionUrgencies>
+							<bodyGraphicData>
+								<texPath>Things/Pawn/Animal/Owl_AfricanGrass/Owl_AfricanGrass_Fly</texPath>
+							</bodyGraphicData>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
