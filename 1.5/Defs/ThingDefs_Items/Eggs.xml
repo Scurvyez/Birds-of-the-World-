@@ -149,4 +149,34 @@
       </li>
     </comps>
   </ThingDef>
+  
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EggBlueTailedHummerUnfertilized</defName>
+    <label>blue-tailed hummingbird (unfert.)</label>
+    <description>Unfertilized blue-tailed hummingbird egg. It can be eaten raw, but it's much,
+      much better cooked.</description>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggBlueTailedHummerFertilized</defName>
+    <label>blue-tailed hummingbird (fert.)</label>
+    <description>Fertilized blue-tailed hummingbird egg. You can eat it, but should you?</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>5.5</hatcherDaystoHatch>
+        <hatcherPawn>TYR_Hummingbird_BlueTailed</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
 </Defs>

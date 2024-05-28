@@ -2,38 +2,36 @@
 <Defs>
 
   <ThingDef ParentName="AnimalThingBase">
-    <defName>TYR_Parrot_Caica</defName>
-    <label>caica parrot</label>
-    <description>A parrot easily identified by its black face and golden neck. Their piercing call
-      echoes throughout the tropical forests they live in.\n\nScientific Name: Pyrilia caica</description>
+    <defName>TYR_Hummingbird_BlueTailed</defName>
+    <label>blue-tailed hummingbird</label>
+    <description>This hummingbird's namesake blue tail is only visible in the proper lighting.\n\nScientific Name: Saucerottia cyanura</description>
     <statBases>
       <MoveSpeed>5</MoveSpeed>
-      <MarketValue>250</MarketValue>
-      <LeatherAmount>10</LeatherAmount>
+      <MarketValue>50</MarketValue>
+      <LeatherAmount>5</LeatherAmount>
       <ComfyTemperatureMin>0</ComfyTemperatureMin>
-      <FilthRate>1.5</FilthRate>
+      <FilthRate>2</FilthRate>
     </statBases>
     <race>
       <body>Bird</body>
       <herdAnimal>true</herdAnimal>
       <predator>false</predator>
-      <baseBodySize>0.2</baseBodySize>
+      <baseBodySize>0.1</baseBodySize>
       <baseHungerRate>0.1</baseHungerRate>
-      <baseHealthScale>0.25</baseHealthScale>
-      <foodType>VegetarianRoughAnimal</foodType>
+      <baseHealthScale>0.1</baseHealthScale>
+      <foodType>OmnivoreAnimal</foodType>
       <wildness>0.4</wildness>
-      <petness>0.3</petness>
       <nuzzleMtbHours>12</nuzzleMtbHours>
       <nameOnTameChance>1</nameOnTameChance>
       <wildBiomes>
         <TropicalSwamp>0.01</TropicalSwamp>
-        <TropicalRainforest>0.6</TropicalRainforest>
+        <TropicalRainforest>0.8</TropicalRainforest>
         <BiomesIslands_TropicalIsland MayRequire="biomesteam.biomesislands">0.5</BiomesIslands_TropicalIsland>
-		<BMT_ChromaticOasis MayRequire="biomesteam.oasis">0.6</BMT_ChromaticOasis>
+		<BMT_ChromaticOasis MayRequire="biomesteam.oasis">0.8</BMT_ChromaticOasis>
       </wildBiomes>
       <trainability>Intermediate</trainability>
       <useMeatFrom>Chicken</useMeatFrom>
-      <lifeExpectancy>25</lifeExpectancy>
+      <lifeExpectancy>5</lifeExpectancy>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -46,16 +44,16 @@
         <li>
           <def>AnimalJuvenile</def>
           <minAge>0.1666</minAge>
-          <soundWounded>Pawn_Parrot_Caica_Call</soundWounded>
-          <soundCall>Pawn_Parrot_Caica_Call</soundCall>
-          <soundAngry>Pawn_Parrot_Caica_Call</soundAngry>
+          <soundWounded>Pawn_BTHummer_Call</soundWounded>
+          <soundCall>Pawn_BTHummer_Call</soundCall>
+          <soundAngry>Pawn_BTHummer_Call</soundAngry>
         </li>
         <li>
           <def>AnimalAdult</def>
           <minAge>0.5</minAge>
-          <soundWounded>Pawn_Parrot_Caica_Call</soundWounded>
-          <soundCall>Pawn_Parrot_Caica_Call</soundCall>
-          <soundAngry>Pawn_Parrot_Caica_Call</soundAngry>
+          <soundWounded>Pawn_BTHummer_Call</soundWounded>
+          <soundCall>Pawn_BTHummer_Call</soundCall>
+          <soundAngry>Pawn_BTHummer_Call</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -64,7 +62,6 @@
     </race>
     <tradeTags>
       <li>AnimalUncommon</li>
-      <li>AnimalPet</li>
     </tradeTags>
     <tools>
       <li>
@@ -82,7 +79,7 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>6</power>
+        <power>5</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
       </li>
@@ -100,28 +97,28 @@
     </tools>
     <comps>
       <li Class="CompProperties_EggLayer">
-        <eggUnfertilizedDef>EggCaicaParrotUnfertilized</eggUnfertilizedDef>
-        <eggFertilizedDef>EggCaicaParrotFertilized</eggFertilizedDef>
+        <eggUnfertilizedDef>EggBlueTailedHummerUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggBlueTailedHummerFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>15</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>1~3</eggCountRange>
+        <eggCountRange>1</eggCountRange>
       </li>
     </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>TYR_Parrot_Caica</defName>
-    <label>caica parrot</label>
-    <race>TYR_Parrot_Caica</race>
-    <combatPower>30</combatPower>
-    <ecoSystemWeight>0.2</ecoSystemWeight>
-    <wildGroupSize>2~4</wildGroupSize>
+    <defName>TYR_Hummingbird_BlueTailed</defName>
+    <label>blue-tailed hummingbird</label>
+    <race>TYR_Hummingbird_BlueTailed</race>
+    <combatPower>25</combatPower>
+    <ecoSystemWeight>0.1</ecoSystemWeight>
+    <wildGroupSize>1~3</wildGroupSize>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Parrot_Caica/ParrotCaica</texPath>
-          <drawSize>0.5</drawSize>
+          <texPath>Things/Pawn/Animal/Hummingbird_BlueTailed/Hummingbird_BlueTailed</texPath>
+          <drawSize>0.2</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Owl_skel</texPath>
@@ -130,8 +127,8 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Parrot_Caica/ParrotCaica</texPath>
-          <drawSize>0.6</drawSize>
+          <texPath>Things/Pawn/Animal/Hummingbird_BlueTailed/Hummingbird_BlueTailed</texPath>
+          <drawSize>0.4</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Owl_skel</texPath>
@@ -140,8 +137,8 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Parrot_Caica/ParrotCaica</texPath>
-          <drawSize>0.7</drawSize>
+          <texPath>Things/Pawn/Animal/Hummingbird_BlueTailed/Hummingbird_BlueTailed</texPath>
+          <drawSize>0.5</drawSize>
           <shadowData>
             <volume>(0.25, 0.3, 0.25)</volume>
             <offset>(0,0,-0.15)</offset>
@@ -149,7 +146,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Owl_skel</texPath>
-          <drawSize>0.7</drawSize>
+          <drawSize>0.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>

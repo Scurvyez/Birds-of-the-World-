@@ -19,13 +19,15 @@
       <baseHealthScale>0.25</baseHealthScale>
       <foodType>OmnivoreAnimal</foodType>
       <wildness>0.6</wildness>
+      <nuzzleMtbHours>12</nuzzleMtbHours>
+      <nameOnTameChance>1</nameOnTameChance>
       <wildBiomes>
         <TemperateForest>0.6</TemperateForest>
-        <BiomesIslands_TemperateIsland MayRequire="biomesteam.biomesislands">0.8</BiomesIslands_TemperateIsland>
+        <BiomesIslands_TemperateIsland MayRequire="biomesteam.biomesislands">0.6</BiomesIslands_TemperateIsland>
       </wildBiomes>
       <trainability>Intermediate</trainability>
       <useMeatFrom>Chicken</useMeatFrom>
-      <lifeExpectancy>15</lifeExpectancy>
+      <lifeExpectancy>5</lifeExpectancy>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -73,7 +75,7 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>6</power>
+        <power>5</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
       </li>
@@ -87,14 +89,6 @@
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.2</chanceFactor>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
       </li>
     </tools>
     <comps>
@@ -115,7 +109,7 @@
     <race>TYR_Triller_WhiteBrowed</race>
     <combatPower>30</combatPower>
     <ecoSystemWeight>0.2</ecoSystemWeight>
-    <wildGroupSize>3~9</wildGroupSize>
+    <wildGroupSize>3~5</wildGroupSize>
     <lifeStages>
       <li>
         <bodyGraphicData>

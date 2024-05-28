@@ -12,10 +12,10 @@
       <MarketValue>50</MarketValue>
       <LeatherAmount>5</LeatherAmount>
       <ComfyTemperatureMin>0</ComfyTemperatureMin>
-      <FilthRate>2</FilthRate>
+      <FilthRate>0.5</FilthRate>
     </statBases>
     <race>
-	  <renderTree>TYR_AnimalRandomizedColors</renderTree>
+	  <!--<renderTree>TYR_AnimalRandomizedColors</renderTree>-->
       <body>Bird</body>
       <predator>false</predator>
       <baseBodySize>0.2</baseBodySize>
@@ -23,14 +23,16 @@
       <baseHealthScale>0.25</baseHealthScale>
       <foodType>OmnivoreAnimal</foodType>
       <wildness>0.6</wildness>
+      <nuzzleMtbHours>12</nuzzleMtbHours>
+      <nameOnTameChance>1</nameOnTameChance>
       <wildBiomes>
         <TemperateForest>0.6</TemperateForest>
-        <BiomesIslands_TemperateIsland MayRequire="biomesteam.biomesislands">0.8</BiomesIslands_TemperateIsland>
-        <ZBiome_CloudForest MayRequire="zylle.morevanillabiomes">0.8</ZBiome_CloudForest>
+        <BiomesIslands_TemperateIsland MayRequire="biomesteam.biomesislands">0.6</BiomesIslands_TemperateIsland>
+        <ZBiome_CloudForest MayRequire="zylle.morevanillabiomes">0.6</ZBiome_CloudForest>
       </wildBiomes>
       <trainability>Intermediate</trainability>
       <useMeatFrom>Chicken</useMeatFrom>
-      <lifeExpectancy>15</lifeExpectancy>
+      <lifeExpectancy>5</lifeExpectancy>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -78,7 +80,7 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>6</power>
+        <power>5</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
       </li>
@@ -92,19 +94,10 @@
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.2</chanceFactor>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
       </li>
     </tools>
-	<modExtensions>
+	<!--<modExtensions>
       <li Class="BOTW.ModExtension_RandomAdultGraphics">
-        <!--<grayscaleAdultGraphics>true</grayscaleAdultGraphics>--> <!-- for testing -->
         <adultGraphicsMale>
           <li>
             <texPath>Things/Pawn/Animal/Cuckooshrike_BlackWinged/Cuckooshrike_BlackWinged_M_1</texPath>
@@ -116,7 +109,7 @@
           </li>
         </adultGraphicsFemale>
       </li>
-    </modExtensions>
+    </modExtensions>-->
     <comps>
       <li Class="CompProperties_EggLayer">
         <eggUnfertilizedDef>EggBlackWingedCuckooshrikeUnfertilized</eggUnfertilizedDef>
@@ -124,28 +117,7 @@
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>15</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>1</eggCountRange>
-      </li>
-	  <li Class="BOTW.CompProperties_AnimalColorRandomizer">
-		<!--Body-->
-        <maleRRangeOne>0.0~0.07</maleRRangeOne> <!-- mask texture red color (red channel) -->
-        <maleGRangeOne>0.0~0.1</maleGRangeOne> <!-- mask texture red color (green channel) -->
-        <maleBRangeOne>0.65~0.8</maleBRangeOne> <!-- mask texture red color (blue channel) -->
-		
-		<!--Crest/wings-->
-        <maleRRangeTwo>0.0~0.1</maleRRangeTwo> <!-- mask texture green color (red channel) -->
-        <maleGRangeTwo>0.1~0.4</maleGRangeTwo> <!-- mask texture green color (green channel) -->
-        <maleBRangeTwo>0.8~0.9</maleBRangeTwo> <!-- mask texture green color (blue channel) -->
-
-		<!-- Body-->
-        <femaleRRangeOne>0.0~0.0</femaleRRangeOne>
-        <femaleGRangeOne>0.0~0.1</femaleGRangeOne>
-        <femaleBRangeOne>0.2~0.4</femaleBRangeOne>
-
-		<!--Crest/wings-->
-        <femaleRRangeTwo>0.1~0.15</femaleRRangeTwo>
-        <femaleGRangeTwo>0.1~0.15</femaleGRangeTwo>
-        <femaleBRangeTwo>0.4~0.5</femaleBRangeTwo>
+        <eggCountRange>1~3</eggCountRange>
       </li>
     </comps>
   </ThingDef>
@@ -156,7 +128,7 @@
     <race>TYR_Cuckooshrike_BlackWinged</race>
     <combatPower>30</combatPower>
     <ecoSystemWeight>0.2</ecoSystemWeight>
-    <wildGroupSize>3~9</wildGroupSize>
+    <wildGroupSize>2~5</wildGroupSize>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -181,7 +153,7 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Cuckooshrike_BlackWinged/Cuckooshrike_BlackWinged_M</texPath>
-          <drawSize>0.7</drawSize>
+          <drawSize>0.8</drawSize>
           <shadowData>
             <volume>(0.25, 0.3, 0.25)</volume>
             <offset>(0,0,-0.15)</offset>
@@ -189,7 +161,7 @@
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/Cuckooshrike_BlackWinged/Cuckooshrike_BlackWinged_F</texPath>
-          <drawSize>0.7</drawSize>
+          <drawSize>0.8</drawSize>
           <shadowData>
             <volume>(0.25, 0.3, 0.25)</volume>
             <offset>(0,0,-0.15)</offset>
@@ -197,7 +169,7 @@
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Owl_skel</texPath>
-          <drawSize>0.7</drawSize>
+          <drawSize>0.8</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
